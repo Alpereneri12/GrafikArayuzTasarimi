@@ -1,0 +1,34 @@
+.themeToggle {
+  padding: 0.5rem 1rem;
+  background-color: #0f1825; /* Gündüz modu */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer; /* İmleç üzerine geldiğinde el işareti */
+  font-weight: bold; /* Kalın yazı tipi */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.themeToggle:hover {
+  background-color: gray;
+}
+
+.dark-mode {
+  background-color: #0f1825; /* Gece modu */
+  color: #f1f5f9;
+}
+
+.dark-mode:hover {
+  background-color: #d97706;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 600px) {
+  .themeToggle {
+    margin: 5px 10px;
+  }
+  .themeToggle button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}

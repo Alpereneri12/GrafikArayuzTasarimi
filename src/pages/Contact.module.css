@@ -1,0 +1,358 @@
+/* Genel Ayarlar */
+.contact-container {
+  font-family: 'Arial', Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tema Modları */
+.light-mode {
+  background-color: #fefefe;
+  color: #222;
+}
+
+.dark-mode {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+/* Tema özel bölümler */
+.dark-mode .hero {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.dark-mode .contactInfo,
+.dark-mode .contactForm,
+.dark-mode .map {
+  background-color: #2d3748;
+  color: #f1f5f9;
+}
+
+.dark-mode .submitButton {
+  background-color: #0f1825;
+  color: #f1f5f9;
+}
+
+.dark-mode .submitButton:hover,
+.dark-mode .submitButton:focus {
+  background-color: #f97316;
+}
+
+.dark-mode h1,
+.dark-mode h2 {
+  color: #f97316;
+}
+
+.dark-mode p,
+.dark-mode li,
+.dark-mode label {
+  color: #e5e7eb;
+}
+
+/* Tema Toggle Butonu Konumu */
+.themeToggleWrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+
+/* Hero Bölümü */
+.hero {
+  background: rgba(245, 158, 11, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
+  backdrop-filter: saturate(180%) blur(12px);
+  animation: fadeIn 1s forwards;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.hero .tagline {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  animation: slideUp 0.8s ease forwards 0.4s;
+}
+/* Temel Buton Stilleri */
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Butonlar arası boşluk */
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Küçük ekranlarda alt alta geçmesi için */
+}
+.homeButton {
+  background-color: #0f1825;
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgb(249 115 22 / 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  outline: none;
+}
+
+/* Hover ve Focus Efektleri */
+.homeButton:hover,
+.homeButton:focus {
+  background-color: #f97316;
+  transform: scale(1.12);
+  animation: pulse 0.6s ease infinite alternate;
+  box-shadow: 0 6px 20px rgb(249 115 22 / 0.6);
+  outline: none;
+}
+
+/* İletişim Bilgileri */
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f59e0b1a;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-left: 8px;
+  color: #f59e0b;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  background-color: #f59e0b;
+  color: #fff;
+  transform: scale(1.15);
+}
+
+.socialLink svg {
+  font-size: 1.3rem;
+}
+.contactInfo {
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+.contactInfo h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #f59e0b;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.infoList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+.infoList .icon {
+  color: #f59e0b;
+  font-size: 1.5rem;
+}
+
+/* İletişim Formu */
+.contactForm {
+  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  background-color: #f8fafc;
+  animation: fadeIn 1s forwards 0.7s;
+}
+
+.contactForm h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #f59e0b;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.formGroup label {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: orange;
+}
+
+.input,
+.textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #f59e0b;
+  outline: none;
+}
+
+.submitButton {
+  background-color: #0f1825;
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgb(249 115 22 / 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+  background-color: #f97316;
+  transform: scale(1.12);
+  box-shadow: 0 6px 20px rgb(249 115 22 / 0.6);
+}
+
+/* Harita Bölümü */
+.map {
+  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 1s forwards 0.9s;
+}
+
+.map h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #f59e0b;
+}
+
+.mapContainer {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fefefe;
+  color: #f59e0b;
+  font-weight: 700;
+  font-size: 1.5rem;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 15px;
+  animation: pulse 1.6s infinite ease-in-out;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #f59e0b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+.loader p {
+  margin: 0;
+  letter-spacing: 1.2px;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1.15); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero .tagline {
+    font-size: 1.1rem;
+  }
+  .contactInfo,
+  .contactForm,
+  .map {
+    padding: 3rem 1.5rem;
+  }
+  .infoList li {
+    font-size: 1.1rem;
+  }
+  .formGroup label {
+    font-size: 1rem;
+  }
+  .mapContainer iframe {
+    height: 300px;
+  }
+}
