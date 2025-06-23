@@ -1,0 +1,254 @@
+.about-container {
+  font-family: 'Arial', Helvetica, sans-serif;
+  background-color: #fefefe;
+  color: #222;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.chef, .details, .team {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.chef {
+  animation-delay: 0.6s;
+}
+
+.details {
+  animation-delay: 0.4s;
+  background-color: #f8fafc; /* Gündüz beyaz */
+}
+
+.team {
+  animation-delay: 0.2s;
+}
+
+.p, .details p, .team p {
+  padding: 40px 20px;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+/* Hero Alanı */
+.hero {
+  background-color: #f59e0b;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  transition: background-color 0.3s ease, opacity 0.5s ease;
+  border-radius: 5px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease forwards;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Tema Toggle Butonu Konumu */
+.themeToggleWrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* Butonlar */
+.homeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 160px;
+  padding: 0.7rem 1.8rem;
+  border-radius: 25px;
+  background-color: #0f1825;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  border: none;
+  box-shadow: 0 4px 12px rgb(249 115 22 / 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.homeButton:hover,
+.homeButton:focus {
+  background-color: #f97316;
+  transform: scale(1.12);
+  animation: pulse 0.6s ease-in-out infinite alternate;
+  box-shadow: 0 6px 20px rgb(249 115 22 / 0.6);
+  outline: none;
+}
+
+.homeButton svg {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1.15); }
+}
+
+.details {
+  padding: 60px 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.details h2 {
+  font-size: 2rem;
+  color: #f59e0b;
+  margin-bottom: 1rem;
+}
+
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.dark-mode {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+.dark-mode .hero {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.dark-mode .details {
+  background-color: #2d3748; /* Gece modu */
+}
+
+.dark-mode .details h2 {
+  color: #facc15;
+}
+
+.dark-mode .homeButton {
+  background-color: #0f1825;
+}
+
+.dark-mode .homeButton:hover {
+  background-color: #f97316;
+}
+
+.image {
+  max-width: 250px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  color: #f59e0b;
+  margin-top: 1.5rem;
+}
+
+p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 120px;
+  background-color: #fefefe;
+  color: #f59e0b;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: opacity 0.5s ease;
+}
+
+.loader.fade-out {
+  opacity: 0;
+}
+
+.loader > * {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #f59e0b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 6px;
+}
+
+.loader p {
+  margin: 0;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

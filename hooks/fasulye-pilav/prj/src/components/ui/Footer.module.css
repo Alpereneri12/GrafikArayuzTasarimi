@@ -1,0 +1,45 @@
+.footer {
+  background-color: #1e293b; /* Gündüz modu */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer p a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer p a:hover,
+.footer p a:focus {
+  color: #f59e0b;
+  text-decoration: underline;
+  background-color: #334155;
+  border-radius: 5px;
+}
+
+.footer p a:focus {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.dark-mode {
+  background-color: #0f172a; /* Gece modu */
+  color: #f1f5f9;
+}
+
+.dark-mode p a {
+  color: #f1f5f9;
+}
+
+.dark-mode p a:hover,
+.dark-mode p a:focus {
+  color: #f59e0b;
+  background-color: #334155;
+  text-decoration: underline;
+  border-radius: 5px;
+}
